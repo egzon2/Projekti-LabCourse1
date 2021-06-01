@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81b35a08-f175-463e-ba0e-5ab77a1ebc07">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     Klienti."KID" AS Klienti_KID,
+     Klienti."TID" AS Klienti_TID,
+     Klienti."FID" AS Klienti_FID,
+     Klienti."Emri" AS Klienti_Emri,
+     Klienti."Mbiemri" AS Klienti_Mbiemri,
+     Klienti."Gjinia" AS Klienti_Gjinia,
+     Klienti."NrPersonal" AS Klienti_NrPersonal,
+     Klienti."Mosha" AS Klienti_Mosha,
+     Klienti."Qyteti" AS Klienti_Qyteti,
+     Klienti."Adresa" AS Klienti_Adresa
+FROM
+     "dbo"."Klienti" Klienti]]>
+	</queryString>
+	<field name="Klienti_KID" class="java.lang.Integer"/>
+	<field name="Klienti_TID" class="java.lang.Integer"/>
+	<field name="Klienti_FID" class="java.lang.Integer"/>
+	<field name="Klienti_Emri" class="java.lang.String"/>
+	<field name="Klienti_Mbiemri" class="java.lang.String"/>
+	<field name="Klienti_Gjinia" class="java.lang.String"/>
+	<field name="Klienti_NrPersonal" class="java.lang.Integer"/>
+	<field name="Klienti_Mosha" class="java.lang.Integer"/>
+	<field name="Klienti_Qyteti" class="java.lang.String"/>
+	<field name="Klienti_Adresa" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="206" y="26" width="164" height="40" uuid="5fdc0832-29d9-4638-b43d-6ed5294d96ae"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Klienti Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="58" height="20" uuid="156cbaaf-8ace-4884-90df-9652ba9cda13"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="0" width="56" height="20" uuid="ff6e6908-e575-4acf-84c9-576ba4614b76"/>
+				<text><![CDATA[TID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="55" height="20" uuid="8744d89b-1a73-4b2b-bc0b-6f46f5e2d248"/>
+				<text><![CDATA[FID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="58" height="20" uuid="d94c712f-faf0-49a6-9792-22cc4c950918"/>
+				<text><![CDATA[Emri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="0" width="64" height="20" uuid="480e035b-9632-47bd-8df5-07745338bf3e"/>
+				<text><![CDATA[Mbiemri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="35" height="20" uuid="418619bd-3468-4b80-8d1b-e7c0c16f8608"/>
+				<text><![CDATA[Gjinia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="66" height="20" uuid="bb4542d8-f3a1-4195-91a4-08077f8a51c6"/>
+				<text><![CDATA[NrPersonal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="0" width="38" height="20" uuid="fa4b2de7-e073-46e7-b291-84238f40004b"/>
+				<text><![CDATA[Mosha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="51" height="20" uuid="8cddf4f9-11c2-4485-8913-548688250ba1"/>
+				<text><![CDATA[Qyteti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="0" width="74" height="20" uuid="5478b93c-594e-4760-9eea-e420d88a6c63"/>
+				<text><![CDATA[Adresa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="58" height="20" uuid="3a9cff90-e00e-4dd9-8f7a-aad01784bbae"/>
+				<textFieldExpression><![CDATA[$F{Klienti_KID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="0" width="56" height="20" uuid="f7683eb1-ce97-4563-bc22-8ecf57d4d7de"/>
+				<textFieldExpression><![CDATA[$F{Klienti_TID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="55" height="20" uuid="032eca03-6fbe-44cb-bdce-8897144e98a5"/>
+				<textFieldExpression><![CDATA[$F{Klienti_FID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="0" width="58" height="20" uuid="18b4627e-bcec-40ad-8db3-42b81d2f592e"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Emri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="64" height="20" uuid="4fe1ce32-139c-4eee-99c6-6f6ac39b5514"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Mbiemri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="34" height="20" uuid="566e4df3-2fa3-4c74-8073-78e4238644a8"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Gjinia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="66" height="20" uuid="60d57b46-de4b-4e11-8d4d-f053e555074e"/>
+				<textFieldExpression><![CDATA[$F{Klienti_NrPersonal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="38" height="20" uuid="23c1ca57-72e6-4365-985d-5d85cf9f5591"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Mosha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="51" height="20" uuid="5593521d-303f-4312-9801-20c3d0dbe890"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Qyteti}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="481" y="0" width="71" height="20" uuid="115d9776-b303-471b-ab70-7d7db3b70892"/>
+				<textFieldExpression><![CDATA[$F{Klienti_Adresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>
